@@ -3,13 +3,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { Purchase } from "@/app/types";
 
 // Make purchases accessible to other routes
-// @ts-ignore
+// @ts-expect-error checked
 if (!global.purchases) {
-  // @ts-ignore
+  // @ts-expect-error checked
   global.purchases = [];
 }
 
-// @ts-ignore
+// @ts-expect-error checked
 const purchases = global.purchases;
 
 
